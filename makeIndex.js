@@ -29,7 +29,7 @@ async function walkForPdfs(dir) {
  * @return {Promise<void>} - Resolves when index.html has been written.
  */
 async function generateHtmlIndex(pdfPaths) {
-  const title = "Michael Basman Legacy Audio Cassette Booklets";
+  const title = "Michael Basman Scoresheets";
 
 	const listItems = pdfPaths
 	.map((absPath) => {
@@ -54,7 +54,7 @@ async function generateHtmlIndex(pdfPaths) {
 </head>
 <body>
   <h1>${title}</h1>
-  <p>Index of audio chess CASSette booklets:</p>
+  <p>Index of scoresheets:</p>
   <ul>
 ${listItems}
   </ul>
