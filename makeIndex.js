@@ -77,7 +77,7 @@ ${listItems}
 	
 	const pdfObjs = pdfs.map(name => ({
         name,
-        tokens: path.basename(name).match(/\d+|\D+/g).map(t => (isNaN(t) ? t.toLowerCase() : Number(t)))
+        tokens: name.match(/\d+|\D+/g).map(t => (isNaN(t) ? t.toLowerCase() : Number(t)))
     }));
 
 	pdfObjs.sort((a, b) => {
